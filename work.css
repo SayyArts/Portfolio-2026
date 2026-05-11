@@ -1,0 +1,189 @@
+html, body {
+  height: 100%;
+  max-height: 100vh;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+/* ─── WORKS PAGE LAYOUT ─── */
+.works-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  padding: 0 40px;
+  justify-content: space-between;
+  overflow: visible;
+  position: relative;
+}
+
+/* ─── CAROUSEL AREA ─── */
+.works-carousel-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 -40px;
+  padding: 0 40px;
+}
+
+.works-track-wrapper {
+  overflow: hidden;
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  padding-left: 40px;
+}
+
+.works-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  cursor: default;
+  user-select: none;
+}
+
+.works-track:active {
+  cursor: grabbing;
+}
+
+.work-slide {
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.work-thumb-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.work-thumb {
+  width: 594px;
+  height: 594px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+}
+
+/* ─── NAME ─── */
+.works-name-bar {
+  display: none;
+}
+
+.work-slide-name-wrapper {
+  overflow: hidden;
+}
+
+.work-slide-name {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 480;
+  color: #000000;
+  display: block;
+  transform: translateY(100%);
+}
+
+/* ─── BOTTOM BAR ─── */
+.works-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  padding-top: 16px;
+}
+
+.works-big-title {
+  font-size: 128px;
+  font-weight: 800;
+  line-height: 1;
+  color: #090909;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* ─── BOTTOM CENTER ─── */
+.works-bottom-center {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.works-progress-row {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.works-scroll-label {
+  font-size: 20px;
+  font-weight: 480;
+  color: #1e1e1e;
+}
+
+.works-progress {
+  font-size: 20px;
+  font-weight: 480;
+  color: #1e1e1e;
+}
+
+.works-progress-bar-track {
+  width: 112%;
+  height: 1.5px;
+  background: rgba(9, 9, 9, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.works-progress-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #1e1e1e;
+}
+
+/* ─── BOTTOM RIGHT ─── */
+.works-bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  padding-bottom: 12px;
+  font-size: 20px;
+  font-weight: 480;
+  color: #1e1e1e;
+}
+
+/* ─── PROGRESS NUMBER ─── */
+#worksProgressNum {
+  display: inline-block;
+  width: 2ch;
+  margin-left: -8px;
+  white-space: nowrap;
+}
+
+.paren {
+  margin: 0 -3px;
+}
+
+.progress-inner {
+  display: inline-flex;
+  width: 52px;
+  justify-content: center;
+}
+
+.works-big-title-wrapper,
+.works-bottom-center-wrapper,
+.works-bottom-right-wrapper {
+  overflow: hidden;
+}
+
+.works-bottom-center-wrapper {
+  overflow: hidden;
+  padding-right: 40px;
+  margin-right: -40px;
+}
