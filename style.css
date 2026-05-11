@@ -1402,29 +1402,38 @@ margin-bottom: 120px;
 
 @media (max-width: 768px) {
 
+  /* ─── RESET ─── */
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    max-height: none;
+    min-height: 100%;
+  }
+
   /* ─── NAVBAR ─── */
   .navbar {
     padding: 16px 20px;
+    position: relative;
+  }
+
+  .nav-left {
+    font-size: 16px;
   }
 
   .nav-links {
     display: none;
   }
 
-  .nav-left {
-    display: none;
-  }
-
   .nav-cta {
     font-size: 16px;
-    padding: 13px 18px;
+    padding: 10px 16px;
   }
 
   /* ─── HERO ─── */
   .hero {
-    padding: 0 20px;
     height: auto;
-    min-height: 100vh;
+    padding: 0 20px;
+    min-height: 100svh;
   }
 
   .hero-top {
@@ -1432,39 +1441,35 @@ margin-bottom: 120px;
   }
 
   .hero-card {
-    width: 200px;
+    width: 180px;
   }
 
   .hero-name {
-    font-size: clamp(80px, 22vw, 160px);
-    margin-top: 60px;
+    font-size: clamp(72px, 20vw, 120px);
+    margin-top: 24px;
+    line-height: 0.9;
   }
 
   .hero-bottom {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
     padding-bottom: 60px;
-    gap: 20px;
   }
 
   .hero-bio {
-    max-width: 100%;
     font-size: 16px;
+    max-width: 100%;
   }
 
   .hero-scroll {
     font-size: 16px;
   }
 
-  /* ─── PROJECTS INTRO ─── */
-  .projects-intro {
-    padding: 20px;
-  }
-
   /* ─── APPROACH ─── */
   .approach {
     flex-direction: column;
-    padding: 60px 20px 80px 20px;
+    padding: 80px 20px 80px 20px;
     gap: 40px;
   }
 
@@ -1482,233 +1487,273 @@ margin-bottom: 120px;
 
   .approach-right {
     margin-left: 0;
-    max-width: 100%;
     padding-top: 0;
-    gap: 24px;
+    max-width: 100%;
   }
 
   .approach-text {
-    font-size: clamp(32px, 8vw, 48px);
+    font-size: clamp(28px, 8vw, 48px);
   }
 
-  /* ─── WORKS ─── */
-  .works-section {
-    padding: 60px 20px;
-    margin-top: 0;
+  .approach-btn {
+    font-size: 16px;
+    padding: 14px 20px;
   }
 
-  .works-header {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 32px;
-    gap: 0;
+  /* ─── FEATURED WORKS ─── */
+  .projects-intro {
+    padding: 60px 20px 24px 20px;
+  }
+
+  /* Title row: FEATURED WORKS left, (04) right, same baseline */
+  .works-header,
+  .featured-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
   }
 
   .works-title,
-  .works-count {
-    font-size: clamp(56px, 16vw, 96px);
+  .featured-title {
+    font-size: clamp(36px, 10vw, 56px);
+    font-weight: 800;
+    line-height: 1;
   }
 
-  .works-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .works-count,
+  .featured-count {
+    font-size: clamp(36px, 10vw, 56px);
+    font-weight: 800;
+    line-height: 1;
   }
 
-  .works-grid .work-item:nth-child(3),
-  .works-grid .work-item:nth-child(4) {
-    margin-top: 0;
+  /* Grid layout */
+  .works-grid,
+  .featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 0 20px;
   }
 
-  .work-meta {
-    font-size: 16px;
-  }
-
-  /* ─── FOCUS SECTION ─── */
-  .focus-inner {
-    grid-template-columns: 1fr;
-    padding: 60px 20px;
-    gap: 32px;
-  }
-
-  .focus-num {
-    font-size: clamp(60px, 18vw, 100px);
+  /* Item 1: flush left, margin-right ~15% */
+  .work-item:nth-child(1) {
     margin-left: 0;
+    margin-right: 15%;
   }
 
-  .focus-label {
-    margin-left: 12px;
+  /* Item 2: flush right, margin-left ~15% */
+  .work-item:nth-child(2) {
+    margin-left: 15%;
+    margin-right: 0;
   }
 
-  .focus-title {
-    font-size: clamp(28px, 7vw, 48px);
+  /* Items 3 & 4: centered, slight inset both sides */
+  .work-item:nth-child(3),
+  .work-item:nth-child(4) {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
-  .focus-visual {
+  .work-item img,
+  .work-thumb {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    border-radius: 12px;
   }
 
-  .focus-desc {
+  .work-meta,
+  .work-slide-name {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  /* ─── SERVICES ─── */
+  .services-section {
+    padding: 80px 20px;
+  }
+
+  .services-title {
+    font-size: clamp(32px, 9vw, 48px);
+  }
+
+  .service-card {
+    width: 100%;
     font-size: 16px;
   }
 
-  .focus-hero-title {
-    font-size: clamp(32px, 10vw, 56px);
-    top: 20px;
-    left: 20px;
+  /* ─── BRANDS ─── */
+  .brands-section {
+    padding: 80px 20px;
   }
 
-  .focus-hero-arrow {
-    font-size: 56px;
-    bottom: 20px;
-    right: 20px;
+  .brands-title {
+    font-size: clamp(36px, 10vw, 56px);
   }
 
-  /* ─── CLIENTS ─── */
-  .clients-section {
-    padding: 80px 20px 80px;
+  .brands-sub {
+    display: none;
   }
 
-  .clients-header {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 48px;
-    gap: 16px;
-  }
-
-  .clients-title {
-    font-size: clamp(40px, 12vw, 64px);
-  }
-
-  .clients-grid {
+  .brands-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .clients-cta-wrap {
-    margin-top: 60px;
-    margin-bottom: 80px;
+    gap: 24px;
   }
 
   /* ─── CONTACT BAR ─── */
   .contact-bar {
     flex-direction: column;
     padding: 60px 20px;
-    gap: 20px;
+    gap: 12px;
     align-items: flex-start;
   }
 
-  .contact-bar-label,
+  .contact-bar-label {
+    font-size: clamp(24px, 7vw, 40px);
+  }
+
   .contact-bar-email {
-    font-size: clamp(28px, 7vw, 48px);
+    font-size: clamp(24px, 7vw, 40px);
+  }
+
+  .contact-bar-cta {
+    display: none;
   }
 
   /* ─── STACK ─── */
   .stack-section {
-    padding: 60px 20px 100px;
-    margin-bottom: 60px;
+    padding: 60px 20px 80px;
+  }
+
+  .stack-title {
+    font-size: clamp(40px, 12vw, 64px);
   }
 
   .stack-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
     padding: 0;
-    gap: 10px;
-  }
-
-  .stack-title {
-    font-size: clamp(48px, 14vw, 80px);
   }
 
   /* ─── FOOTER ─── */
   .site-footer {
-    margin: 0 20px 20px 20px;
-    gap: 40px;
+    margin: 0 12px 12px 12px;
+    border-radius: 16px;
   }
 
   .footer-main {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px 0 20px;
   }
 
-  .footer-image {
-    top: 0;
-  }
+  /* Order: nav → info → image */
+  .footer-nav   { order: 1; }
+  .footer-info  { order: 2; }
+  .footer-image { order: 3; }
 
   .footer-image img {
     width: 100%;
     height: auto;
   }
 
-  .footer-label {
+  .footer-nav ul li a {
+    font-size: clamp(28px, 8vw, 40px);
     padding-left: 0;
   }
 
-  .footer-nav ul li a {
-    font-size: clamp(32px, 9vw, 48px);
+  .footer-label {
+    font-size: 12px;
     padding-left: 0;
   }
 
   .footer-info p {
+    font-size: 14px;
     padding-left: 0;
-    font-size: 16px;
   }
 
+  /* Bottom bar */
   .footer-bottom {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 12px 0;
+    padding: 20px 20px 24px 20px;
+    align-items: end;
+  }
+
+  .footer-bottom-left {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .footer-bottom-mid {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    display: flex;
+    gap: 20px;
   }
 
   .footer-bottom-mid a {
+    font-size: 14px;
     padding-left: 0;
-    font-size: 16px;
   }
 
   .footer-bottom-right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 6px;
   }
 
   .back-to-top {
+    font-size: 14px;
     padding-left: 0;
-    font-size: 16px;
   }
 
   .footer-bottom-right span {
-    font-size: 16px;
+    font-size: 12px;
   }
 
-  /* ─── ABOUT (shared) ─── */
+  /* ─── ABOUT ─── */
   .about-hero {
     padding: 0 20px;
   }
 
   .about-big-text {
-    font-size: clamp(120px, 35vw, 300px);
-    letter-spacing: -10px;
-    gap: 10px;
-    margin-left: -10px;
-    margin-bottom: 40px;
+    font-size: clamp(96px, 28vw, 180px);
+    letter-spacing: -6px;
+    gap: 8px;
+    margin-left: -8px;
+    margin-bottom: 32px;
   }
 
   .about-placeholder {
-    width: 180px;
-    height: 224px;
+    width: 140px;
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
 
   .about-bottom-bar {
-    font-size: 14px;
-    margin-top: -40px;
+    font-size: 13px;
+    margin-top: -30px;
   }
 
   .about-paragraph p {
-    font-size: clamp(28px, 7vw, 40px);
+    font-size: clamp(24px, 6vw, 36px);
+    padding: 0 20px;
   }
 
   .gallery-para-text {
-    font-size: clamp(28px, 7vw, 48px);
-    padding-left: 0;
+    font-size: clamp(24px, 6vw, 40px);
+    padding-left: 20px;
     padding-top: 40px;
   }
 
@@ -1723,17 +1768,17 @@ margin-bottom: 120px;
   }
 
   .hobbies-title {
-    font-size: clamp(36px, 10vw, 56px);
-    margin-bottom: 48px;
+    font-size: clamp(32px, 9vw, 48px);
+    margin-bottom: 40px;
   }
 
   .hobbies-body {
     flex-direction: column;
-    gap: 48px;
+    gap: 40px;
   }
 
   .hobby-item {
-    font-size: clamp(24px, 7vw, 40px);
+    font-size: clamp(20px, 6vw, 32px);
   }
 
   .hobbies-image-wrap {
@@ -1744,10 +1789,58 @@ margin-bottom: 120px;
 
   .hobbies-caption {
     width: 100%;
+    font-size: 14px;
   }
 
-  .hobbies-media {
-    align-items: flex-start;
-    width: 100%;
+  /* ─── WORKS PAGE ─── */
+  .works-page {
+    height: auto;
+    padding: 0 20px;
+    overflow: visible;
   }
+
+  .works-carousel-area {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .works-track-wrapper {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .works-track {
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  .work-thumb {
+    width: 80vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    transform: none;
+  }
+
+  .works-big-title {
+    font-size: clamp(48px, 14vw, 80px);
+  }
+
+  .works-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    gap: 16px;
+  }
+
+  .works-scroll-label,
+  .works-progress,
+  .works-bottom-right {
+    font-size: 16px;
+  }
+
 }
+
