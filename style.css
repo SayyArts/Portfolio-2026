@@ -1400,3 +1400,354 @@ margin-bottom: 120px;
   margin-bottom: 115px;
 }
 
+@media (max-width: 768px) {
+
+  /* ─── NAVBAR ─── */
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-left {
+    display: none;
+  }
+
+  .nav-cta {
+    font-size: 16px;
+    padding: 13px 18px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 0 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-top {
+    padding-top: 40px;
+  }
+
+  .hero-card {
+    width: 200px;
+  }
+
+  .hero-name {
+    font-size: clamp(80px, 22vw, 160px);
+    margin-top: 60px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    gap: 20px;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .hero-scroll {
+    font-size: 16px;
+  }
+
+  /* ─── PROJECTS INTRO ─── */
+  .projects-intro {
+    padding: 20px;
+  }
+
+  /* ─── APPROACH ─── */
+  .approach {
+    flex-direction: column;
+    padding: 60px 20px 80px 20px;
+    gap: 40px;
+  }
+
+  .approach-left {
+    min-width: unset;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .approach-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .approach-right {
+    margin-left: 0;
+    max-width: 100%;
+    padding-top: 0;
+    gap: 24px;
+  }
+
+  .approach-text {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+
+  /* ─── WORKS ─── */
+  .works-section {
+    padding: 60px 20px;
+    margin-top: 0;
+  }
+
+  .works-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    gap: 0;
+  }
+
+  .works-title,
+  .works-count {
+    font-size: clamp(56px, 16vw, 96px);
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .works-grid .work-item:nth-child(3),
+  .works-grid .work-item:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .work-meta {
+    font-size: 16px;
+  }
+
+  /* ─── FOCUS SECTION ─── */
+  .focus-inner {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 32px;
+  }
+
+  .focus-num {
+    font-size: clamp(60px, 18vw, 100px);
+    margin-left: 0;
+  }
+
+  .focus-label {
+    margin-left: 12px;
+  }
+
+  .focus-title {
+    font-size: clamp(28px, 7vw, 48px);
+  }
+
+  .focus-visual {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .focus-desc {
+    font-size: 16px;
+  }
+
+  .focus-hero-title {
+    font-size: clamp(32px, 10vw, 56px);
+    top: 20px;
+    left: 20px;
+  }
+
+  .focus-hero-arrow {
+    font-size: 56px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* ─── CLIENTS ─── */
+  .clients-section {
+    padding: 80px 20px 80px;
+  }
+
+  .clients-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    gap: 16px;
+  }
+
+  .clients-title {
+    font-size: clamp(40px, 12vw, 64px);
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clients-cta-wrap {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  /* ─── CONTACT BAR ─── */
+  .contact-bar {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .contact-bar-label,
+  .contact-bar-email {
+    font-size: clamp(28px, 7vw, 48px);
+  }
+
+  /* ─── STACK ─── */
+  .stack-section {
+    padding: 60px 20px 100px;
+    margin-bottom: 60px;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    gap: 10px;
+  }
+
+  .stack-title {
+    font-size: clamp(48px, 14vw, 80px);
+  }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    margin: 0 20px 20px 20px;
+    gap: 40px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-image {
+    top: 0;
+  }
+
+  .footer-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-label {
+    padding-left: 0;
+  }
+
+  .footer-nav ul li a {
+    font-size: clamp(32px, 9vw, 48px);
+    padding-left: 0;
+  }
+
+  .footer-info p {
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  .footer-bottom-mid a {
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .footer-bottom-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .back-to-top {
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .footer-bottom-right span {
+    font-size: 16px;
+  }
+
+  /* ─── ABOUT (shared) ─── */
+  .about-hero {
+    padding: 0 20px;
+  }
+
+  .about-big-text {
+    font-size: clamp(120px, 35vw, 300px);
+    letter-spacing: -10px;
+    gap: 10px;
+    margin-left: -10px;
+    margin-bottom: 40px;
+  }
+
+  .about-placeholder {
+    width: 180px;
+    height: 224px;
+  }
+
+  .about-bottom-bar {
+    font-size: 14px;
+    margin-top: -40px;
+  }
+
+  .about-paragraph p {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  .gallery-para-text {
+    font-size: clamp(28px, 7vw, 48px);
+    padding-left: 0;
+    padding-top: 40px;
+  }
+
+  .gallery-para-label {
+    left: 20px;
+    top: 40px;
+  }
+
+  /* ─── HOBBIES ─── */
+  .hobbies-section {
+    padding: 80px 20px;
+  }
+
+  .hobbies-title {
+    font-size: clamp(36px, 10vw, 56px);
+    margin-bottom: 48px;
+  }
+
+  .hobbies-body {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .hobby-item {
+    font-size: clamp(24px, 7vw, 40px);
+  }
+
+  .hobbies-image-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .hobbies-caption {
+    width: 100%;
+  }
+
+  .hobbies-media {
+    align-items: flex-start;
+    width: 100%;
+  }
+}
